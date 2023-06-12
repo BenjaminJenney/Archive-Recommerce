@@ -1,0 +1,65 @@
+body {
+    font-family: 'Radley', serif;
+    color: #37462E;
+}
+
+/* input, label {
+    display:block;
+} */
+
+input, select {
+    width: 250px;
+    padding: 8px 20px;
+    margin: 8px 0;
+    margin-bottom: 20px;
+    display: block;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+label {
+    font-size: 12px;
+}
+
+  
+input[type=submit] {
+    width: 100%;
+    background-color: #37462E;
+    color: white;
+    padding: 14px 20px;
+    margin: 8px 0;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+
+#signup-box {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    min-height: 50vh;
+    /* width: 30%; */
+    background-color: #F3F3F3;
+    margin-top: 75px;
+    border-radius: 10px;
+    min-width: 400px;
+    /* border: black solid 3px; */
+
+    box-shadow: 1px 4px 4px rgba(0, 0, 0, 0.25);
+}
+
+#title {
+    font-weight: normal;
+    margin-bottom: 25px;
+}
+
+.flex-h {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}

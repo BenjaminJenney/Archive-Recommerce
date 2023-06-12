@@ -1,0 +1,43 @@
+{% extends "base_loggedin.html" %}
+{% load static %}
+
+
+{% block content %}
+<div id="closet-header">
+    <h1 class="bold-text-left">Your Closet</h1>
+    <h2 class="description-left">Add them to your closet to get a real time value estimate.</h2>
+    <hr class="ln-center-wide">
+    
+</div>
+<div id="closet-content">
+    {% for item in closet_items %}
+    <div class="closet-item">
+        <div id="closet-photo">
+            <!-- <img src="{% static 'img/standin_img.jpeg' %}" height="160"/> -->
+            <!-- <img src="{% static 'images/imgs/placeholder.PNG' %}" height="100%"/> -->
+            {% if item.image %}
+            <img src="{{item.image.url}}" height="100%"/>
+            {% else %} 
+            <img src="{% static 'images/imgs/placeholder.PNG' %}" height="100%"/>
+            {% endif %}
+            
+        </div>
+        <div id="closet-description">
+            <h1 id="cl-item-title">{{item.item_name}}<br>{{item.brand}}</h1>
+            <h2 id="cl-item-text">Purchase Price: ${{item.purchase_price}}</h2>
+            <h3 id="cl-item-text">Purchase Date: {{item.purchased_date}}
+                <br> {{item.source_site}}
+            </h3>
+        </div>
+        <div id="btn-container">
+            <button id="btn-list" type="button" onclick="location.href = '/'">List</button>
+        </div>
+        <!-- <button id="btn-list" type="button" onclick="location.href = '/'">List</button> -->
+    </div>
+    {%endfor%}
+
+
+
+</div>
+
+{% endblock %}

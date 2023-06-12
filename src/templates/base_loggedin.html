@@ -1,0 +1,26 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" type="text/css" href="{% static 'read_email/style.css' %}">
+    <title>{% block title %}Archive Recommerce{% endblock %}</title>
+    {% block head %}{% endblock %}
+</head>
+
+<body>
+    <div id="sidebar">
+        {% block sidebar %}
+        <ul>
+            <li class= "logo"><a href="/">THE ARCHIVE</a></li>
+            <li><a href="/get-started">{{user.email}}</a></li>
+            <li><a href="contact.asp">Your Purchases</a></li>
+            <li><a href="/closet">Your Closet</a></li>
+          </ul>
+        {% endblock %}
+    </div>
+
+    <div id="content-light">
+        {% block content %}{% endblock %}
+    </div>
+</body>
+</html>

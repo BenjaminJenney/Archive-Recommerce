@@ -1,0 +1,42 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}Sign Up{% endblock %}
+{% block head %}<link rel="stylesheet" href="{% static 'read_email/accounts.css' %}">{% endblock %}
+
+{% block content %}
+  <!-- <h2>Sign up</h2>
+  <form method="post">
+    {% csrf_token %}
+    {{ form.as_p }}
+    <button type="submit">Sign Up</button>
+  </form> -->
+
+  <form action="#" method="post">
+    <div class="flex-h">
+      <div id="signup-box">
+        <h2 id="title">Sign Up</h2>
+        <div>
+          <label for="Email" class="floatLabel">EMAIL</label>
+          <input id="Email" name="Email" type="text">
+        </div>
+      
+        <div>
+          <label for="password" class="floatLabel">PASSWORD</label>
+          <input id="password" name="password" type="password">
+          <!-- <span>Enter a password longer than 8 characters</span> -->
+        </div>
+        <div>
+          <label for="confirm_password" class="floatLabel">CONFIRM PASSWORD</label>
+          <input id="confirm_password" name="confirm_password" type="password">
+          <!-- <span>Your passwords do not match</span> -->
+        </div>
+        <p>
+          <input type="submit" value="Create My Account" id="submit">
+        </p>
+      </div>
+    </div>
+   
+      
+    </form>
+{% endblock %}

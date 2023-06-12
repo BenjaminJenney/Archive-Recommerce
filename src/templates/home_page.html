@@ -1,0 +1,16 @@
+{% extends "base.html" %}
+
+
+{% block content %}
+<div id="home-content">
+    <h1 class="header-text">Create Your Archive</h1>
+    <h2 class="description-text">Instantly see a list of all your purchases. 
+        Value your items, add to your personal Archive, and sell with use seamlessly.</h2>
+    {% if user.is_authenticated %}
+    <button class="btn-dark" type="button" onclick="location.href = '/closet'">Go to Closet</button>
+    {% else %}
+    <button class="btn-dark" type="button" onclick="location.href = '/get-started'">Get Started Now</button>
+    {% endif %}
+</div>
+
+{% endblock %}
